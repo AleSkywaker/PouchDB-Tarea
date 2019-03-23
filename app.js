@@ -5,7 +5,7 @@
 // 1- Crear la base de datos
 // Nombre:  mensajes
 
-
+var db = new PouchDB('mensajes');
 
 // Objeto a grabar en base de datos
 let mensaje = {
