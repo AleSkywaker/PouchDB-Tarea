@@ -18,6 +18,17 @@ const mensajes = [
 		user: 'hulk',
 		mensaje: 'Hola mundo'
 	}
+	,
+	{
+		_id: 'XXX',
+		user: 'ironman',
+		mensaje: 'Hola mundo'
+	},
+	{
+		_id: 'XXX',
+		user: 'hulk',
+		mensaje: 'Hola mundo'
+	}
 ];
 
 // Get mensajes
