@@ -1,13 +1,13 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const path = require('path');
+
 
 const app = express();
 
 const publicPath = path.resolve(__dirname, '../public');
 const port = process.env.PORT || 3000;
 
-var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
