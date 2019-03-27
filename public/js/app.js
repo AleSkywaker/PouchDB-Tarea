@@ -139,6 +139,14 @@ postBtn.on('click', function() {
         cancelarBtn.click();
         return;
     }
+    
+    fetch('api',{
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+
 
     crearMensajeHTML( mensaje, usuario );
 
