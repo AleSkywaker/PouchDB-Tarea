@@ -139,6 +139,11 @@ postBtn.on('click', function() {
         cancelarBtn.click();
         return;
     }
+
+    var data = {
+        mensaje: mensaje,
+        user: usuario
+    }
     
     fetch('api',{
         method: 'POST',
