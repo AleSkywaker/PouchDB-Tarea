@@ -18,17 +18,6 @@ const mensajes = [
 		user: 'hulk',
 		mensaje: 'Hola mundo'
 	}
-	,
-	{
-		_id: 'XXX',
-		user: 'ironman',
-		mensaje: 'Hola mundo'
-	},
-	{
-		_id: 'XXX',
-		user: 'hulk',
-		mensaje: 'Hola mundo'
-	}
 ];
 
 // Get mensajes
@@ -37,22 +26,19 @@ router.get('/', function(req, res) {
 	res.json(mensajes);
 });
 
-
 //Post mensaje
-router.post('/', function(req, res){
-
-    const mensaje = {
+router.post('/', function(req, res) {
+	const mensaje = {
 		mensaje: req.body.mensaje,
 		user: req.body.user
-	}
+	};
 
-	mensajes.push(mensaje)
+	mensajes.push(mensaje);
 
-   res.json({
-	   ok:true,
-	   mensaje,
-	   mensajes
-   })
-
-})
+	console.log(mensaje);
+	res.json({
+		ok: true,
+		mensaje
+	});
+});
 module.exports = router;
