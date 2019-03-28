@@ -29,6 +29,8 @@ function manejoApiMensajes(cacheName, req) {
 	if (req.clone().method === 'POST') {
 		//Posteo de un nuevo mensaje
 
+		req.clone().text()
+
 		// Guardar en indexDB
 		return fetch (req)
 	} else {
