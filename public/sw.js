@@ -1,6 +1,6 @@
 // imports
-importScripts('https://cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js')
-importScripts('js/sw-db.js')
+importScripts('https://cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js');
+importScripts('js/sw-db.js');
 importScripts('js/sw-utils.js');
 
 const STATIC_CACHE = 'static-v1';
@@ -59,8 +59,7 @@ self.addEventListener('fetch', (e) => {
 
 	if (e.request.url.includes('/api')) {
 		//return respuesta
-       respuesta = manejoApiMensajes(DYNAMIC_CACHE, e.request)
-
+		respuesta = manejoApiMensajes(DYNAMIC_CACHE, e.request);
 	} else {
 		respuesta = caches.match(e.request).then((res) => {
 			if (res) {
