@@ -30,7 +30,9 @@ function manejoApiMensajes(cacheName, req) {
 		//Posteo de un nuevo mensaje
 
 		req.clone().text().then(body => {
-			console.log("body", body)
+
+			const bodyObj = JSON.parse(body);
+			guardarMensaje(bodyObj)
 		})
 
 		// Guardar en indexDB
