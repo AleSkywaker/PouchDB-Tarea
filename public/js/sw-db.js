@@ -10,6 +10,7 @@ function guardarMensaje(mensaje) {
 		
 		const newResp = {ok: true, offline: true}
 
+		return new Response(JSON.stringify(newResp))
 		console.log('Mensaje guardado para posterior posteo');
 	});
 }
