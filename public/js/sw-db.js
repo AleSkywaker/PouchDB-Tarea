@@ -4,13 +4,12 @@ const db = new PouchDB('mensajes');
 function guardarMensaje(mensaje) {
 	mensaje._id = new Date().toISOString();
 
-	db.put(mensaje).then(() => {
-  
-		self.registration.sync.register('nuevo-post')
-		
-		const newResp = {ok: true, offline: true}
+	return db.put(mensaje).then(() => {
+		self.registration.sync.register('nuevo-post');
 
-		return new Response(JSON.stringify(newResp))
+		const newResp = { ok: true, offline: true };
+
+		return new Response(JSON.stringify(newResp));
 		console.log('Mensaje guardado para posterior posteo');
 	});
 }
