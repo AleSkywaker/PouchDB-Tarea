@@ -8,6 +8,7 @@ function guardarMensaje(mensaje) {
   
 		self.registration.sync.register('nuevo-post')
 		
+		const newResp = {ok: true, offline: true}
 
 		console.log('Mensaje guardado para posterior posteo');
 	});
