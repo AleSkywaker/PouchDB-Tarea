@@ -29,16 +29,15 @@ function manejoApiMensajes(cacheName, req) {
 	if (req.clone().method === 'POST') {
 		//Posteo de un nuevo mensaje
 
-        if(self.register.sync){		
+		if (self.register.sync) {
 			req.clone().text().then((body) => {
 				const bodyObj = JSON.parse(body);
 				guardarMensaje(bodyObj);
 			});
+		} else {
+			// Guardar en indexDB
+			return fetch(req);
 		}
-
-
-		// Guardar en indexDB
-		return fetch(req);
 	} else {
 		return fetch(req)
 			.then((res) => {
