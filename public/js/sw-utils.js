@@ -30,9 +30,9 @@ function manejoApiMensajes(cacheName, req) {
 		//Posteo de un nuevo mensaje
 
 		if (self.registration.sync) {
-			req.clone().text().then((body) => {
+			return req.clone().text().then((body) => {
 				const bodyObj = JSON.parse(body);
-				guardarMensaje(bodyObj);
+				return guardarMensaje(bodyObj);
 			});
 		} else {
 			// Guardar en indexDB
