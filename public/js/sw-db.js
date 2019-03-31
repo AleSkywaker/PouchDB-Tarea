@@ -13,3 +13,9 @@ function guardarMensaje(mensaje) {
 		console.log('Mensaje guardado para posterior posteo');
 	});
 }
+
+//Postear mensajes a la API
+
+function postearMensajes(){
+	
+}
