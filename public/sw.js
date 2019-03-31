@@ -74,3 +74,15 @@ self.addEventListener('fetch', (e) => {
 	}
 	e.respondWith(respuesta);
 });
+
+//Tareas asyncronas
+
+self.addEventListener('sync', (e) => {
+	console.log('SW:sync');
+if(e.tag == 'nuevo-post'){
+	//TODO: Postear a DB cuando haya conexion
+
+	//e.waitUntil(??)
+}
+	 
+});
