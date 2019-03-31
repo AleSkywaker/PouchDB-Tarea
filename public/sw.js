@@ -82,6 +82,9 @@ self.addEventListener('sync', (e) => {
 if(e.tag == 'nuevo-post'){
 	//TODO: Postear a DB cuando haya conexion
 
+
+	postearMensajes()
+
 	//e.waitUntil(??)
 }
 	 
