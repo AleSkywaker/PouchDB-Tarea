@@ -17,5 +17,11 @@ function guardarMensaje(mensaje) {
 //Postear mensajes a la API
 
 function postearMensajes(){
-	
+
+	db.allDocs({include_docs:true}).then(docs=>{
+		docs.rows.forEach(row => {
+			const doc = row.doc;
+		});
+	})
+
 }
