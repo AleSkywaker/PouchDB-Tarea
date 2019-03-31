@@ -16,12 +16,18 @@ function guardarMensaje(mensaje) {
 
 //Postear mensajes a la API
 
-function postearMensajes(){
-
-	db.allDocs({include_docs:true}).then(docs=>{
-		docs.rows.forEach(row => {
+function postearMensajes() {
+	db.allDocs({ include_docs: true }).then((docs) => {
+		docs.rows.forEach((row) => {
 			const doc = row.doc;
-		});
-	})
 
+			fetch('api', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(doc)
+			});
+		});
+	});
 }
