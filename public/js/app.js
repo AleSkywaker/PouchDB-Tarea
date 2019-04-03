@@ -187,9 +187,9 @@ function notificarme() {
         new Notication('Permiso concedido')
     }else if (otification.permission !== 'denied' || otification.permission === 'default'){
         Notification.requestPermission(function (permiso){
-
+            console.log(permiso)
             if(permiso === 'granted'){
-                
+
             }
 
         })
