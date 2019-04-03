@@ -189,6 +189,7 @@ function notificarme() {
         Notification.requestPermission(function (permiso){
             console.log(permiso)
             if(permiso === 'granted'){
+                new Notication('Permiso concedido - pregunta')
 
             }
 
