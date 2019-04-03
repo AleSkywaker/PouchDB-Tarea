@@ -180,20 +180,19 @@ isOnline();
 //Notificaciones
 
 function notificarme() {
-	if (!window.Notication) {
+	if (!window.Notification) {
 		console.log('Este navegador no soporta notificaciones');
-    }
-    if(Notification.permission === 'granted'){
-        new Notication('Permiso concedido')
-    }else if (otification.permission !== 'denied' || otification.permission === 'default'){
-        Notification.requestPermission(function (permiso){
-            console.log(permiso)
-            if(permiso === 'granted'){
-                new Notication('Permiso concedido - pregunta')
-
-            }
-
-        })
-    }
+		return;
+    } 
+    if (Notification.permission === 'granted') {
+		new Notification('Permiso concedido');
+	} else if (Notification.permission !== 'denied' || Notification.permission === 'default') {
+		Notification.requestPermission(function(permiso) {
+			console.log(permiso);
+			if (permiso === 'granted') {
+				new Notification('Permiso concedido - pregunta');
+			}
+		});
+	}
 }
-notificarme() 
+notificarme();
