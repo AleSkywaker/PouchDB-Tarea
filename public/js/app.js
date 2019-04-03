@@ -185,5 +185,13 @@ function notificarme() {
     }
     if(Notification.permission === 'granted'){
         new Notication('Permiso concedido')
+    }else if (otification.permission !== 'denied' || otification.permission === 'default'){
+        Notification.requestPermission(function (permiso){
+
+            if(permiso === 'granted'){
+                
+            }
+
+        })
     }
 }
