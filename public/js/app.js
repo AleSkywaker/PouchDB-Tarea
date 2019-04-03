@@ -182,5 +182,8 @@ isOnline();
 function notificarme() {
 	if (!window.Notication) {
 		console.log('Este navegador no soporta notificaciones');
-	}
+    }
+    if(Notification.permission === 'granted'){
+        new Notication('Permiso concedido')
+    }
 }
