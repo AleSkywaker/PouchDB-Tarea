@@ -188,7 +188,7 @@ function notificarme() {
 		new Notification('Permiso concedido anteriormente');
 	} else if (Notification.permission !== 'denied' || Notification.permission === 'default') {
 		Notification.requestPermission(function(permiso) {
-			console.log(permiso);
+			console.log("permiso" +permiso);
 			if (permiso === 'granted') {
 				new Notification('Permiso concedido - pregunta');
 			}
