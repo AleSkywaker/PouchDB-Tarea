@@ -181,6 +181,12 @@ isOnline();
 
 function enviarNotificacion(){
 	
+	const notificationsOpt = {
+		body: "Este es el cuerpo de la notificación",
+        icon: 'img/icons/icon-72x72.png'
+	}
+
+	new Notification('Mensaje nuevo', notificationsOpt)
 }
 
 function notificarme() {
