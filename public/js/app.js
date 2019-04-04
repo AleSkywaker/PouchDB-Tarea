@@ -190,7 +190,7 @@ function notificarme() {
 		Notification.requestPermission(function(permiso) {
 			console.log("permiso" +permiso);
 			if (permiso === 'granted') {
-				new Notification('Permiso concedido - pregunta');
+				new Notification('Permiso concedido - desde la pregunta');
 			}
 		});
 	}
