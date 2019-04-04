@@ -186,7 +186,11 @@ function enviarNotificacion(){
         icon: 'img/icons/icon-72x72.png'
 	}
 
-	new Notification('Mensaje nuevo', notificationsOpt)
+	const n = new Notification('Mensaje nuevo', notificationsOpt)
+ 
+    n.onclick = ()=>{
+		console.log('click')
+	}
 }
 
 function notificarme() {
@@ -195,12 +199,15 @@ function notificarme() {
 		return;
     } 
     if (Notification.permission === 'granted') {
-		new Notification('Permiso concedido anteriormente');
+		//new Notification('Permiso concedido anteriormente');
+
+		enviarNotificacion()
 	} else if (Notification.permission !== 'denied' || Notification.permission === 'default') {
 		Notification.requestPermission(function(permiso) {
 			console.log("permiso" +permiso);
 			if (permiso === 'granted') {
-				new Notification('Permiso concedido - desde la pregunta');
+				//new Notification('Permiso concedido - desde la pregunta');
+				enviarNotificacion()
 			}
 		});
 	}
