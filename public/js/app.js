@@ -179,6 +179,10 @@ isOnline();
 
 //Notificaciones
 
+function enviarNotificacion(){
+	
+}
+
 function notificarme() {
 	if (!window.Notification) {
 		console.log('Este navegador no soporta notificaciones');
