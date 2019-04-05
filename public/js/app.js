@@ -180,6 +180,8 @@ isOnline();
 // Verificar suscripcion
 function verificarSuscripcion(activadas) {
 	if (activadas) {
+		btnActivadas.removeClass('oculto');
+		btnDesactivadas.addClass('oculto');
 	} else {
 	}
 }
