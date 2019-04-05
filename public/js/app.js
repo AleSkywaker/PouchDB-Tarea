@@ -183,6 +183,8 @@ function verificarSuscripcion(activadas) {
 		btnActivadas.removeClass('oculto');
 		btnDesactivadas.addClass('oculto');
 	} else {
+		btnActivadas.addClass('oculto');
+		btnDesactivadas.removeClass('oculto');
 	}
 }
 
