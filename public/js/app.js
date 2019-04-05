@@ -182,8 +182,8 @@ isOnline();
 function enviarNotificacion(){
 	
 	const notificationsOpt = {
-		body: "Este es el cuerpo de la notificación",
-        icon: 'img/icons/icon-72x72.png'
+		body: "Este es el cuerpo de la notificación nueva",
+        icon: '/img/icons/icon-72x72.png'
 	}
 
 	const n = new Notification('Mensaje nuevo', notificationsOpt)
@@ -204,7 +204,7 @@ function notificarme() {
 		enviarNotificacion()
 	} else if (Notification.permission !== 'denied' || Notification.permission === 'default') {
 		Notification.requestPermission(function(permiso) {
-			console.log("permiso" +permiso);
+			console.log("permiso : " + permiso);
 			if (permiso === 'granted') {
 				//new Notification('Permiso concedido - desde la pregunta');
 				enviarNotificacion()
