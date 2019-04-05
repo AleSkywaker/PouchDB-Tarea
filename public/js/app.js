@@ -178,8 +178,12 @@ window.addEventListener('offline', isOnline);
 isOnline();
 
 // Verificar suscripcion
-function verificarSuscripcion(){
+function verificarSuscripcion(activadas){
+	if(activadas){
 
+	}else{
+		
+	}
 }
 
 
