@@ -177,6 +177,13 @@ window.addEventListener('offline', isOnline);
 
 isOnline();
 
+// Verificar suscripcion
+function verificarSuscripcion(){
+
+}
+
+
+
 //Notificaciones
 
 function enviarNotificacion(){
