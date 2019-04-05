@@ -178,47 +178,42 @@ window.addEventListener('offline', isOnline);
 isOnline();
 
 // Verificar suscripcion
-function verificarSuscripcion(activadas){
-	if(activadas){
-
-	}else{
-		
+function verificarSuscripcion(activadas) {
+	if (activadas) {
+	} else {
 	}
 }
 
-
-
 //Notificaciones
 
-function enviarNotificacion(){
-	
+function enviarNotificacion() {
 	const notificationsOpt = {
-		body: "Este es el cuerpo de la notificación nueva",
-        icon: '/img/icons/icon-72x72.png'
-	}
+		body: 'Este es el cuerpo de la notificación nueva',
+		icon: '/img/icons/icon-72x72.png'
+	};
 
-	const n = new Notification('Mensaje nuevo', notificationsOpt)
- 
-    n.onclick = ()=>{
-		console.log('click')
-	}
+	const n = new Notification('Mensaje nuevo', notificationsOpt);
+
+	n.onclick = () => {
+		console.log('click');
+	};
 }
 
 function notificarme() {
 	if (!window.Notification) {
 		console.log('Este navegador no soporta notificaciones');
 		return;
-    } 
-    if (Notification.permission === 'granted') {
+	}
+	if (Notification.permission === 'granted') {
 		//new Notification('Permiso concedido anteriormente');
 
-		enviarNotificacion()
+		enviarNotificacion();
 	} else if (Notification.permission !== 'denied' || Notification.permission === 'default') {
 		Notification.requestPermission(function(permiso) {
-			console.log("permiso : " + permiso);
+			console.log('permiso : ' + permiso);
 			if (permiso === 'granted') {
 				//new Notification('Permiso concedido - desde la pregunta');
-				enviarNotificacion()
+				enviarNotificacion();
 			}
 		});
 	}
