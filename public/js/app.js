@@ -223,3 +223,4 @@ function notificarme() {
 	}
 }
 notificarme();
+verificarSuscripcion(np) 
