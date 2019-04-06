@@ -40,7 +40,7 @@ router.post('/', function (req, res) {
   });
 });
 //Almacenar suscripcion
-router.get('/subscribe', (req, res)=>{
+router.post('/subscribe', (req, res)=>{
   res.json('subscribe')
 })
 //Almacenar suscripcion
@@ -50,7 +50,7 @@ router.get('/key', (req, res)=>{
 //Enviar una notificacion PUSH a las personas
 // que nosotros queramos
 // Es algo que se controla del lado del server
-router.get('/push', (req, res)=>{
+router.post('/push', (req, res)=>{
   res.json('key público')
 })
 
