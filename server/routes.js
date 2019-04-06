@@ -47,7 +47,9 @@ router.get('/subscribe', (req, res)=>{
 router.get('/key', (req, res)=>{
   res.json('key público')
 })
-//Enviar notificación
+//Enviar una notificacion PUSH a las personas
+// que nosotros queramos
+// Es algo que se controla del lado del server
 router.get('/push', (req, res)=>{
   res.json('key público')
 })
