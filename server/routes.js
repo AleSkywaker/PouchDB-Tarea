@@ -39,7 +39,18 @@ router.post('/', function (req, res) {
     mensaje
   });
 });
-
+//Almacenar suscripcion
+router.get('/subscribe', (req, res)=>{
+  res.json('subscribe')
+})
+//Almacenar suscripcion
+router.get('/key', (req, res)=>{
+  res.json('key público')
+})
+//Enviar notificación
+router.get('/push', (req, res)=>{
+  res.json('key público')
+})
 
 
 module.exports = router;
