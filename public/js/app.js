@@ -187,7 +187,7 @@ function verificarSuscripcion(activadas) {
 		btnDesactivadas.removeClass('oculto');
 	}
 }
-
+verificarSuscripcion(np) 
 //Notificaciones
 
 function enviarNotificacion() {
@@ -223,4 +223,4 @@ function notificarme() {
 	}
 }
 notificarme();
-verificarSuscripcion(np) 
+
