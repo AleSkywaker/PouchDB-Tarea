@@ -45,7 +45,6 @@ router.post('/subscribe', (req, res)=>{
 })
 //Almacenar suscripcion
 router.get('/key', (req, res)=>{
-  console.log("key : " , key)
   const key = push.getKey();
   res.send( key )
 })
