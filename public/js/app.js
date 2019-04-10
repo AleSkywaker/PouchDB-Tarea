@@ -6,11 +6,9 @@ if (navigator.serviceWorker) {
 		swLocation = '/sw.js';
 	}
 
-	window.addEventListener('load', function(){
-
+	window.addEventListener('load', function() {
 		navigator.serviceWorker.register(swLocation);
-	})
-
+	});
 }
 
 // Referencias de jQuery
