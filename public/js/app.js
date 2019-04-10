@@ -11,6 +11,7 @@ if (navigator.serviceWorker) {
 	window.addEventListener('load', function() {
 		navigator.serviceWorker.register(swLocation).then(function(reg){
 			swReg = reg;
+			swReg.pushManager.getSubscription();
 		})
 	});
 }
