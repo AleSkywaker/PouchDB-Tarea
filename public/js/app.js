@@ -246,3 +246,10 @@ function getPublicKey() {
 	);
 }
 // getPublicKey().then(console.log);
+
+btnDesactivadas.on('click', function(){
+	if(!swReg) return console.log('No hay registros de SW');
+
+
+
+})
