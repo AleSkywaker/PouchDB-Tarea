@@ -250,6 +250,8 @@ function getPublicKey() {
 btnDesactivadas.on('click', function(){
 	if(!swReg) return console.log('No hay registros de SW');
 
-
+    getPublicKey().then(function(key){
+		
+	})
 
 })
