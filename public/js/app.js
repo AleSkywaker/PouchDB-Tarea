@@ -251,7 +251,10 @@ btnDesactivadas.on('click', function(){
 	if(!swReg) return console.log('No hay registros de SW');
 
     getPublicKey().then(function(key){
-		
+		swReg.pushManager.subscribe({
+			userVisibleOnly:true,
+			applicationServerKey:key
+		})
 	})
 
 })
