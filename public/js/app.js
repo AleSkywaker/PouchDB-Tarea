@@ -245,4 +245,4 @@ function getPublicKey() {
 			.then((key) => new Uint8Array(key))
 	);
 }
-getPublicKey().then(console.log);
+// getPublicKey().then(console.log);
