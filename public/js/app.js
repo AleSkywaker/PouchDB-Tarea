@@ -258,7 +258,9 @@ btnDesactivadas.on('click', function(){
 		.then(res => res.toJSON())
 		.then(suscription =>{
 			// console.log(suscription)
-			fetch('api/susbcribe')
+			fetch('api/susbcribe').then(function(){
+				console.log("exito")
+			})
 			verificarSuscripcion(suscription)
 		})
 	})
