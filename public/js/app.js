@@ -256,9 +256,9 @@ btnDesactivadas.on('click', function(){
 			applicationServerKey:key
 		})
 		.then(res => res.toJSON())
-		.then(sus =>{
-			console.log(sus)
-			verificarSuscripcion(sus)
+		.then(suscription =>{
+			console.log(suscription)
+			verificarSuscripcion(suscription)
 		})
 	})
 
