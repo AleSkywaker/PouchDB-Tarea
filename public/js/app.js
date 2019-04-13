@@ -255,6 +255,11 @@ btnDesactivadas.on('click', function(){
 			userVisibleOnly:true,
 			applicationServerKey:key
 		})
+		.then(res => res.toJSON())
+		.then(sus =>{
+			console.log(sus)
+			verificarSuscripcion(sus)
+		})
 	})
 
 })
