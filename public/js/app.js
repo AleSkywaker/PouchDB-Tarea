@@ -257,7 +257,7 @@ btnDesactivadas.on('click', function(){
 		})
 		.then(res => res.toJSON())
 		.then(suscription =>{
-			console.log(suscription)
+			// console.log(suscription)
 			verificarSuscripcion(suscription)
 		})
 	})
