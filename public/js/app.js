@@ -186,6 +186,7 @@ isOnline();
 
 // Verificar suscripcion
 function verificarSuscripcion(activadas) {
+	console.log("activadas",activadas)
 	if (activadas) {
 		btnActivadas.removeClass('oculto');
 		btnDesactivadas.addClass('oculto');
