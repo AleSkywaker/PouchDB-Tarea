@@ -1,59 +1,54 @@
 // Routes.js - Módulo de rutas
 const express = require('express');
 const router = express.Router();
-const push = require('./push')
+const push = require('./push');
 
 const mensajes = [
-
-  {
-    _id: 'XXX',
-    user: 'spiderman',
-    mensaje: 'Hola Mundo'
-  }
-
+	{
+		_id: 'XXX',
+		user: 'spiderman',
+		mensaje: 'Hola Mundo'
+	}
 ];
 
-
 // Get mensajes
-router.get('/', function (req, res) {
-  // res.json('Obteniendo mensajes');
-  res.json( mensajes );
+router.get('/', function(req, res) {
+	// res.json('Obteniendo mensajes');
+	res.json(mensajes);
 });
-
 
 // Post mensaje
-router.post('/', function (req, res) {
-  
-  const mensaje = {
-    mensaje: req.body.mensaje,
-    user: req.body.user
-  };
+router.post('/', function(req, res) {
+	const mensaje = {
+		mensaje: req.body.mensaje,
+		user: req.body.user
+	};
 
-  mensajes.push( mensaje );
+	mensajes.push(mensaje);
 
-  console.log(mensajes);
+	console.log(mensajes);
 
-
-  res.json({
-    ok: true,
-    mensaje
-  });
+	res.json({
+		ok: true,
+		mensaje
+	});
 });
 //Almacenar suscripcion
-router.post('/subscribe', (req, res)=>{
-  res.json('subscribe')
-})
+router.post('/subscribe', (req, res) => {
+	const suscription = req.body;
+	console.log(suscription);
+	res.json(suscription);
+});
 //Almacenar suscripcion
-router.get('/key', (req, res)=>{
-  const key = push.getKey();
-  res.send( key )
-})
+router.get('/key', (req, res) => {
+	const key = push.getKey();
+	res.send(key);
+});
 //Enviar una notificacion PUSH a las personas
 // que nosotros queramos
 // Es algo que se controla del lado del server
-router.post('/push', (req, res)=>{
-  res.json('key público')
-})
-
+router.post('/push', (req, res) => {
+	res.json('key público');
+});
 
 module.exports = router;
