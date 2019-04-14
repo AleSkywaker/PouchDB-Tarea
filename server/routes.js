@@ -37,7 +37,7 @@ router.post('/', function(req, res) {
 router.post('/subscribe', (req, res) => {
 	const suscription = req.body;
 
-	push.addSubscription(suscription)
+	push.addSubscription(suscription);
 	console.log(suscription);
 	res.json(suscription);
 });
