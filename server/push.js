@@ -7,7 +7,7 @@ module.exports.getKey = () => {
 	return urlsafeBase64.decode(vapid.publicKey);
 };
 
-module.exports.addSubscription = (sus) =>{
+module.exports.addSubscription = (sus) => {
 	suscripciones.push(sus);
-	console.log("Back end", suscripciones)
-}
+	console.log('Back end', suscripciones);
+};
