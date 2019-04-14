@@ -9,10 +9,10 @@ if (navigator.serviceWorker) {
 	}
 
 	window.addEventListener('load', function() {
-		navigator.serviceWorker.register(swLocation).then(function(reg){
+		navigator.serviceWorker.register(swLocation).then(function(reg) {
 			swReg = reg;
-			swReg.pushManager.getSubscription().then(verificarSuscripcion)
-		})
+			swReg.pushManager.getSubscription().then(verificarSuscripcion);
+		});
 	});
 }
 
@@ -186,7 +186,7 @@ isOnline();
 
 // Verificar suscripcion
 function verificarSuscripcion(activadas) {
-	console.log("activadas",activadas)
+	console.log('activadas', activadas);
 	if (activadas) {
 		btnActivadas.removeClass('oculto');
 		btnDesactivadas.addClass('oculto');
@@ -248,26 +248,26 @@ function getPublicKey() {
 }
 // getPublicKey().then(console.log);
 
-btnDesactivadas.on('click', function(){
-	if(!swReg) return console.log('No hay registros de SW');
+btnDesactivadas.on('click', function() {
+	if (!swReg) return console.log('No hay registros de SW');
 
-    getPublicKey().then(function(key){
-		swReg.pushManager.subscribe({
-			userVisibleOnly:true,
-			applicationServerKey:key
-		})
-		.then(res => res.toJSON())
-		.then(suscription =>{
-			// console.log(suscription)
-			fetch('api/subscribe',{
-				method: 'POST',
-				headers: {'Content-Type': 'application/json'},
-				body: JSON.stringify(suscription)
+	getPublicKey().then(function(key) {
+		swReg.pushManager
+			.subscribe({
+				userVisibleOnly: true,
+				applicationServerKey: key
 			})
-			.then(verificarSuscripcion)
-			.then(console.log("error"))
-			//verificarSuscripcion(suscription)
-		})
-	})
-
-})
+			.then((res) => res.toJSON())
+			.then((suscription) => {
+				// console.log(suscription)
+				fetch('api/subscribe', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(suscription)
+				})
+					.then(verificarSuscripcion)
+					.then(console.log('error'));
+				//verificarSuscripcion(suscription)
+			});
+	});
+});
