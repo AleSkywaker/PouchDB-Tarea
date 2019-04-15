@@ -10,7 +10,6 @@ module.exports.getKey = () => {
 
 module.exports.addSubscription = (sus) => {
 	suscripciones.push(sus);
-
-	fs.writeFileSync('${__dirname}/subs-db.json', JSON.stringify(suscripciones))
 	console.log('Back end', suscripciones);
+	fs.writeFileSync('${__dirname}/subs-db.json', JSON.stringify(suscripciones))
 };
