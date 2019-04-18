@@ -2,6 +2,7 @@ const fs = require('fs');
 const urlsafeBase64 = require('urlsafe-base64');
 const vapid = require('./vapid.json');
 
+//Make sure the json file is not empty.
 const suscripciones =  require('./subs-db.json');
 
 module.exports.getKey = () => {
