@@ -271,7 +271,8 @@ btnDesactivadas.on("click", function() {
           body: JSON.stringify(suscription)
         })
           .then(verificarSuscripcion)
-          .then(console.log("error"));
+		  .then(cancelarSuscription);
+		//   .then(console.log("error")); 
         //verificarSuscripcion(suscription)
       });
   });
