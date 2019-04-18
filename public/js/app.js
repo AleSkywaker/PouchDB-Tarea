@@ -282,3 +282,7 @@ function cancelarSuscription() {
     subs.unsubscribe().then(verificarSuscripcion(false));
   });
 }
+
+btnActivadas.on('click', function(){
+	cancelarSuscription()
+})
