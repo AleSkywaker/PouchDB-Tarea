@@ -271,3 +271,11 @@ btnDesactivadas.on('click', function() {
 			});
 	});
 });
+
+function cancelarSuscription(){
+
+    swReg.pushManager.getSubscription().then(subs=>{
+		subs.unsubscribe().then(verificarSuscripcion(false))
+	});
+
+}
