@@ -197,9 +197,8 @@ function verificarSuscripcion(activadas) {
     btnDesactivadas.removeClass("oculto");
   }
 }
-//verificarSuscripcion();
-//Notificaciones
 
+//Notificaciones
 function enviarNotificacion() {
   const notificationsOpt = {
     body: "Este es el cuerpo de la notificación nueva",
@@ -272,15 +271,15 @@ btnDesactivadas.on("click", function() {
         })
           .then(verificarSuscripcion)
 		  .then(cancelarSuscription);
-		//   .then(console.log("error")); 
-        //verificarSuscripcion(suscription)
       });
   });
 });
 
 function cancelarSuscription() {
   swReg.pushManager.getSubscription().then(subs => {
-    subs.unsubscribe().then(verificarSuscripcion(false));
+    subs.unsubscribe().then(()=>{
+		verificarSuscripcion(false)
+	});
   });
 }
 
