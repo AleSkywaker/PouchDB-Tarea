@@ -2,6 +2,14 @@ const fs = require('fs');
 const urlsafeBase64 = require('urlsafe-base64');
 const vapid = require('./vapid.json');
 
+const webpush = require('web-push');
+
+webpush.setVapidDetails(
+	'uricaine@hotmail.com',
+	vapidKeys.publicKey,
+	vapidKeys.privateKey
+  );
+
 //Make sure the json file is not empty.
 const suscripciones =  require('./subs-db.json');
 
