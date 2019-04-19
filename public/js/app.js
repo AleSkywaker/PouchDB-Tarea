@@ -270,7 +270,7 @@ btnDesactivadas.on("click", function() {
           body: JSON.stringify(suscription)
         })
           .then(verificarSuscripcion)
-		  .then(cancelarSuscription);
+		  .catch(cancelarSuscription);
       });
   });
 });
