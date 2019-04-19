@@ -6,8 +6,8 @@ const webpush = require('web-push');
 
 webpush.setVapidDetails(
 	'uricaine@hotmail.com',
-	vapidKeys.publicKey,
-	vapidKeys.privateKey
+	vapid.publicKey,
+	vapid.privateKey
   );
 
 //Make sure the json file is not empty.
