@@ -5,7 +5,7 @@ const vapid = require('./vapid.json');
 const webpush = require('web-push');
 
 webpush.setVapidDetails(
-	'uricaine@hotmail.com',
+	'mailto:uricaine@hotmail.com',
 	vapid.publicKey,
 	vapid.privateKey
   );
@@ -22,3 +22,9 @@ module.exports.addSubscription = (sus) => {
 	console.log('Back end', suscripciones);
 	fs.writeFileSync(`${__dirname}/subs-db.json`, JSON.stringify(suscripciones))
 };
+
+module.exports.sendPush = (post)=>{
+    suscripciones.forEach((subs, i )=> {
+		webpush.sendNotification(subs, post.titulo)
+	});
+}
