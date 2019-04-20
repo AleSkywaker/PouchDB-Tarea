@@ -75,10 +75,6 @@ self.addEventListener('activate', e => {
 
 });
 
-
-
-
-
 self.addEventListener( 'fetch', e => {
 
     let respuesta;
@@ -129,6 +125,15 @@ self.addEventListener('sync', e => {
         e.waitUntil( respuesta );
     }
 
-
-
 });
+
+//Escuchar Push
+self.addEventListener('push', e=>{
+    console.log(e)
+    console.log(e.data.text())
+
+    const title = e.data.text();
+    const options = {};
+
+    e.waitUntil( self.registration.showNotification(title, options))
+})
