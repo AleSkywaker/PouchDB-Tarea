@@ -50,14 +50,14 @@ router.get("/key", (req, res) => {
 // que nosotros queramos
 // Es algo que se controla del lado del server
 router.post("/push", (req, res) => {
-  const notificacion = {
+  const post = {
     titulo: req.body.titulo,
     texto: req.body.texto,
     nombre: req.body.usuario
   };
 
-  push.sendPush(notificacion);
-  res.json(notificacion);
+  push.sendPush(post);
+  res.json(post);
 });
 
 module.exports = router;
