@@ -128,7 +128,7 @@ self.addEventListener('sync', e => {
 });
 
 //Escuchar Push
-self.addEventListener('push', e=>{
+self.addEventListener('push', e => {
     // console.log(e)
     // console.log(e.data.text())
     
@@ -140,7 +140,8 @@ self.addEventListener('push', e=>{
         body: data.texto,
         // icon: 'img/icons/icon-72x72.png'
         icon: `img/avatars/${data.nombre}.jpg`,
-        badge: 'img/favicon.ico'
+        badge: `img/favicon.ico`,
+        image: `http://alicantenews.es/wp-content/uploads/2014/10/vengers.png`
     };
 
     e.waitUntil( self.registration.showNotification(title, options))
