@@ -139,7 +139,8 @@ self.addEventListener('push', e=>{
     const options = {
         body: data.texto,
         // icon: 'img/icons/icon-72x72.png'
-        icon: `img/avatars/${data.nombre}.jpg`
+        icon: `img/avatars/${data.nombre}.jpg`,
+        badge: 'img/favicon.ico'
     };
 
     e.waitUntil( self.registration.showNotification(title, options))
