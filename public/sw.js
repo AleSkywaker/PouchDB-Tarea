@@ -129,11 +129,18 @@ self.addEventListener('sync', e => {
 
 //Escuchar Push
 self.addEventListener('push', e=>{
-    console.log(e)
-    console.log(e.data.text())
+    // console.log(e)
+    // console.log(e.data.text())
+    
+    const data = JSON.parse(e.data.text())
+    console.log(data)
 
-    const title = e.data.text();
-    const options = {};
+    const title = data.titulo;
+    const options = {
+        body: data.texto,
+        // icon: 'img/icons/icon-72x72.png'
+        icon: `img/avatars/${data.nombre}.jpg`
+    };
 
     e.waitUntil( self.registration.showNotification(title, options))
 })
