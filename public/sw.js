@@ -146,7 +146,7 @@ self.addEventListener('push', e => {
         openUrl: '/',
         data : {
             url: 'https.//google.com',
-            id: data.user
+            id: data.usuario
         }
     };
 
