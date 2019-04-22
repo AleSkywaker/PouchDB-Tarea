@@ -152,7 +152,7 @@ self.addEventListener('push', e => {
             {
                 action: 'thior-action',
                 title: 'Thor',
-                icon: 'img/avatar/thor.png'
+                icon: 'img/avatar/thor.jpg'
             }
         ]
     };
