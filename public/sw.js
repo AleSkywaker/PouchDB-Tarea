@@ -159,3 +159,8 @@ self.addEventListener('push', e => {
 
     e.waitUntil( self.registration.showNotification(title, options))
 })
+
+// cierra notificacion
+self.addEventListener('notificationclose', e => {
+    console.log('Notificacion cerrada', e)
+})
