@@ -147,7 +147,14 @@ self.addEventListener('push', e => {
         data : {
             url: 'https.//google.com',
             id: data.usuario
-        }
+        },
+        actions:[
+            {
+                action: 'thior-action',
+                title: 'Thor',
+                icon: 'img/avatar/thor.png'
+            }
+        ]
     };
 
     e.waitUntil( self.registration.showNotification(title, options))
