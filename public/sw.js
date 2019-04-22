@@ -143,7 +143,11 @@ self.addEventListener('push', e => {
         badge: `img/favicon.ico`,
         image: `http://alicantenews.es/wp-content/uploads/2014/10/vengers.png`,
         vibrate : [500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500],
-        openUrl: '/'
+        openUrl: '/',
+        data : {
+            url: 'https.//google.com',
+            id: data.user
+        }
     };
 
     e.waitUntil( self.registration.showNotification(title, options))
