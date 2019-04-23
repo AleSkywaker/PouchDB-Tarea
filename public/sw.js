@@ -172,5 +172,8 @@ self.addEventListener('notificationclose', e => {
 
 //Cuando hacemos click en la notificacion
     self.addEventListener('notificationclick', e => {
-        console.log('Ha hecho click', e)
+        const notificacion = e.notificacion;
+        const accion = e.action;
+
+        console.log({notificacion, accion})
     })
