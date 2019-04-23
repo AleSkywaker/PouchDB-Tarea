@@ -153,6 +153,11 @@ self.addEventListener('push', e => {
                 action: 'thor-action',
                 title: 'Thor',
                 icon: 'img/avatar/thor.jpg'
+            },
+            {
+                action: 'iroman-action',
+                title: 'Iroman',
+                icon: 'img/avatar/iroman.jpg'
             }
         ]
     };
