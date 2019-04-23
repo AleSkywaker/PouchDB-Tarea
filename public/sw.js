@@ -169,3 +169,8 @@ self.addEventListener('push', e => {
 self.addEventListener('notificationclose', e => {
     console.log('Notificacion cerrada', e)
 })
+
+//Cuando hacemos click en la notificacion
+    self.addEventListener('notificationclick', e => {
+        console.log('Ha hecho click', e)
+    })
