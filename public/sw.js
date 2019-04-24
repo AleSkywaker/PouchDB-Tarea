@@ -1,3 +1,5 @@
+import { ClientHttp2Session } from "http2";
+
 // imports
 importScripts('https://cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js')
 
@@ -177,5 +179,6 @@ self.addEventListener('notificationclose', e => {
         const accion = e.action;
 
         console.log({notificacion, accion})
+        ClientHttp2Session.openWindow(notificacion.data.url)
         notificacion.close()
     })
