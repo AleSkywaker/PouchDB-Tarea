@@ -176,4 +176,5 @@ self.addEventListener('notificationclose', e => {
         const accion = e.action;
 
         console.log({notificacion, accion})
+        notificacion.close()
     })
