@@ -184,6 +184,9 @@ self.addEventListener('notificationclose', e => {
             let cliente = clientes.find(c=>{
                 return c.visibilityState === 'visible'
             })
+            if(cliente != undefined){
+                cliente.navigate(notificacion.data.url)
+            }
         })
         ClientHttp2Session.openWindow(notificacion.data.url)
         notificacion.close()
