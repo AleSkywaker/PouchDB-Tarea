@@ -178,7 +178,11 @@ self.addEventListener('notificationclose', e => {
         const notificacion = e.notification;
         const accion = e.action;
 
-        console.log({notificacion, accion})
+        // console.log({notificacion, accion})
+        ClientHttp2Session.matchAll()
+        .then(clientes=>{
+            
+        })
         ClientHttp2Session.openWindow(notificacion.data.url)
         notificacion.close()
     })
