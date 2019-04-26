@@ -178,6 +178,11 @@ self.addEventListener('notificationclose', e => {
 
         console.log({notificacion, accion})
 
+        clients.matchAll()
+            .then(clientes => {
+                
+            })
+
         clients.openWindow( notificacion.data.url )
 
         notificacion.close()
