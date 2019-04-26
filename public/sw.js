@@ -145,7 +145,8 @@ self.addEventListener('push', e => {
         vibrate : [500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500],
         openUrl: '/',
         data : {
-            url:'https://google.com',
+            // url:'https://google.com',
+            url:'/',
             id: data.usuario
         },
         actions:[
