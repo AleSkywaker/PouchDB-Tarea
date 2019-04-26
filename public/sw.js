@@ -184,7 +184,7 @@ self.addEventListener('notificationclose', e => {
                     return c.visibilityState === 'visible';
                 })
                 if(cliente !== undefined){
-                    
+                    cliente.navigate(notificacion.data.url)
                 }
             })
 
