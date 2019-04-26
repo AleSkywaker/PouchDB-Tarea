@@ -180,7 +180,9 @@ self.addEventListener('notificationclose', e => {
 
         clients.matchAll()
             .then(clientes => {
-                
+                let cliente = clientes.find( c => {
+                    return c.visibilityState === 'visible';
+                })
             })
 
         clients.openWindow( notificacion.data.url )
