@@ -24,9 +24,10 @@ module.exports.addSubscription = (sus) => {
 };
 
 module.exports.sendPush = (post)=>{
-	  console.log('Mandando PUSHES')
+		console.log('Mandando PUSHES')
+		const notiticacionesEnviadas = [];
     suscripciones.forEach((subs, i )=> {
-		webpush.sendNotification(subs, JSON.stringify(post))
+		const pushProm = webpush.sendNotification(subs, JSON.stringify(post))
 			.then(console.log('Notification enviada'))
 			.catch(err => {
 					console.log('notiticacion falló')
@@ -34,5 +35,6 @@ module.exports.sendPush = (post)=>{
 						suscripciones[i].borrar = true;
 					} 
 			})
+			notiticacionesEnviadas.push(pushProm)
 	});
 }
