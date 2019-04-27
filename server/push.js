@@ -27,5 +27,6 @@ module.exports.sendPush = (post)=>{
 	  console.log('Mandando PUSHES')
     suscripciones.forEach((subs, i )=> {
 		webpush.sendNotification(subs, JSON.stringify(post))
+			.then(console.log('Notification enviada'))
 	});
 }
