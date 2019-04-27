@@ -28,5 +28,11 @@ module.exports.sendPush = (post)=>{
     suscripciones.forEach((subs, i )=> {
 		webpush.sendNotification(subs, JSON.stringify(post))
 			.then(console.log('Notification enviada'))
+			.catch(err => {
+					console.log('notiticacion falló')
+					if(err.statusCode === 410 ){// GONE, ya no existe
+						suscripciones[i].borrar = true;
+					} 
+			})
 	});
 }
