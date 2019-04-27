@@ -18,6 +18,7 @@
         "web-push": "^3.3.3"
     },
     "devDependencies": {
+        "jshint": "^2.10.2",
         "nodemon": "^1.18.4"
     }
 }
