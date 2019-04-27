@@ -156,7 +156,7 @@ self.addEventListener("notificationclick", e => {
     } else {
       clients.openWindow(notificacion.data.url);
     }
-    notificacion.close();
+    return notificacion.close();
   });
   e.waitUntil(respuesta)
 });
