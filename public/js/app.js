@@ -259,7 +259,7 @@ postBtn.on('click', function() {
         .catch(err => console.log('app.js error:', err));
 
 
-    crearMensajeHTML(mensaje, usuario, lat, lng, foto);
+    crearMensajeHTML(mensaje, usuario, lat, lng);
 
     foto = null;
 });
