@@ -258,8 +258,6 @@ postBtn.on('click', function() {
         .then(res => console.log('app.js', res))
         .catch(err => console.log('app.js error:', err));
 
-    camera.apagar();
-    contenedorCamara.addClass('oculto');
 
     crearMensajeHTML(mensaje, usuario, lat, lng, foto);
 
