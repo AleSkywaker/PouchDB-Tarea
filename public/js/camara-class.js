@@ -6,9 +6,9 @@ class Camara {
     }
 
     enceder(){
-
+        navigator.mediaDevices.getUserMedia();
     }
     apagar(){
-        
+
     }
 }
