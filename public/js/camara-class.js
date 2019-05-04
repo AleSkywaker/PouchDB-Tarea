@@ -6,7 +6,7 @@ class Camara {
         console.log('Camara inicializada')
     }
 
-    enceder(){
+    encender(){
         navigator.mediaDevices.getUserMedia();
     }
     apagar(){

@@ -505,6 +505,8 @@ btnPhoto.on('click', () => {
     console.log('Inicializar camara');
     contenedorCamara.removeClass('oculto')
 
+    camara.encender()
+
 });
 
 
