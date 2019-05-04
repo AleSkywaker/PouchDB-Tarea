@@ -10,7 +10,10 @@ class Camara {
         navigator.mediaDevices.getUserMedia({
             audio: false,
             video: { width: 300, height: 300 }
-        });
+        }).then(stream => {
+            this.videoNode.srcObject = stream;
+            this.stream = stream;
+        })
     }
     apagar() {
 
