@@ -1,15 +1,18 @@
 
 
 class Camara {
-    constructor(videoNode){
+    constructor(videoNode) {
         this.videoNode = videoNode;
         console.log('Camara inicializada')
     }
 
-    encender(){
-        navigator.mediaDevices.getUserMedia();
+    encender() {
+        navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: { width: 300, height: 300 }
+        });
     }
-    apagar(){
+    apagar() {
 
     }
 }
