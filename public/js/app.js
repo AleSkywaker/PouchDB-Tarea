@@ -78,7 +78,7 @@ var usuario;
 
 // Init de la camara class
 //document.getElementById('player')
-const camara = new Camara( $('player')[0])
+const camara = new Camara( $('#player')[0])
 // ===== Codigo de la aplicación
 
 function crearMensajeHTML(mensaje, personaje, lat, lng) {
