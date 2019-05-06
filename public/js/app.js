@@ -245,7 +245,8 @@ postBtn.on('click', function() {
         mensaje: mensaje,
         user: usuario,
         lat: lat,
-        lng: lng
+        lng: lng,
+        foto: foto
     };
 
 
