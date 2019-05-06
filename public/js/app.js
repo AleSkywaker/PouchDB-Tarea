@@ -81,7 +81,7 @@ var usuario;
 const camara = new Camara( $('#player')[0])
 // ===== Codigo de la aplicación
 
-function crearMensajeHTML(mensaje, personaje, lat, lng) {
+function crearMensajeHTML(mensaje, personaje, lat, lng, foto) {
 
     // console.log(mensaje, personaje, lat, lng);
 
