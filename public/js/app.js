@@ -100,12 +100,12 @@ function crearMensajeHTML(mensaje, personaje, lat, lng, foto) {
                 ${ mensaje }
                 `;
 
-    // if (foto) {
-    //     content += `
-    //             <br>
-    //             <img class="foto-mensaje" src="${ foto }">
-    //     `;
-    // }
+    if (foto) {
+        content += `
+                <br>
+                <img class="foto-mensaje" src="${ foto }">
+        `;
+    }
 
     content += `</div>        
                 <div class="arrow"></div>
