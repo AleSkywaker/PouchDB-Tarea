@@ -531,3 +531,8 @@ btnTomarFoto.on('click', () => {
 // }else{
 //     console.log('Navegador no lo soporta')
 // }
+
+
+timeline.on('click', 'li', function(){
+    console.log('click en LI')
+})
