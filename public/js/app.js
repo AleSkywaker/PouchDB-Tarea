@@ -525,3 +525,9 @@ btnTomarFoto.on('click', () => {
 
 
 // Share API
+
+if (navigator.share){
+    console.log('Navegador lo soporta')
+}else{
+    console.log('Navegador no lo soporta')
+}
