@@ -539,4 +539,6 @@ btnTomarFoto.on('click', () => {
 timeline.on('click', 'li', function(){
     
     console.log($(this))
+    console.log($(this).data('tipo'))
+    
 })
