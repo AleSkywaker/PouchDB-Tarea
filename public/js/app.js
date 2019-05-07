@@ -87,8 +87,11 @@ function crearMensajeHTML(mensaje, personaje, lat, lng, foto) {
 
     var content = `
     <li class="animated fadeIn fast"
+        data-user="${ personaje }"
+        data-lat="${ lat }"
+        data-lng="${ lng }"
         data-tipo="mensaje">
-
+        
 
         <div class="avatar">
             <img src="img/avatars/${ personaje }.jpg">
