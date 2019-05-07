@@ -544,7 +544,7 @@ timeline.on('click', 'li', function(){
     let tipo = $(this).data('tipo');
     let lat = $(this).data('lat');
     let lng = $(this).data('lng');
-    let mansaje =  $(this).data('lng');
+    let mansaje =  $(this).data('mensaje');
     let user = $(this).data('user')
 
 })
