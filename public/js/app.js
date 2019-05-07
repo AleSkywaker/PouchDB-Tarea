@@ -540,5 +540,5 @@ timeline.on('click', 'li', function(){
     
     console.log($(this))
     console.log($(this).data('tipo'))
-    
+    console.log($(this).data('user'))
 })
