@@ -538,7 +538,13 @@ btnTomarFoto.on('click', () => {
 
 timeline.on('click', 'li', function(){
     
-    console.log($(this))
+    // console.log($(this))
     console.log($(this).data('tipo'))
     console.log($(this).data('user'))
+    let tipo = $(this).data('tipo');
+    let lat = $(this).data('lat');
+    let lng = $(this).data('lng');
+    let mansaje =  $(this).data('lng');
+    let user = $(this).data('user')
+
 })
